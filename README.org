@@ -1,0 +1,25 @@
+#+TITLE: Haskell Project Template
+
+A simple Cabal + Nix project template. For personal use, will change a lot in backwards-incompatible ways.
+
+~projectname.cabal~ is the source of truth, with Nix deriving everything from here.
+
+* Defaults
+- An opinionated set of default language extensions are enabled by default
+- Most warnings from ~-Weverything~ are enabled
+
+* Getting Started
+- Clone this repo
+- Rename ~projectname.cabal~ to the actual project name
+- Replace all instances of ~projectname~ with the actual project name:
+  - ~find . -type f | xargs sed -i "" "s/projectname/realname/g"~
+
+* Running
+- To run with Cabal, ~cabal run~
+- To run with Nix, ~cabal2nix . > default.nix && nix-build release.nix && result/bin/projectname~
+- For GHCi, ~cabal v2-repl~
+- Nix GHCi not yet supported (may require migrating to ~haskell.nix~)
+
+* Adding New Modules
+- For every new module added, ~projectname.cabal~ needs updating.
+- We also need to run ~gen-hie . > hie.yaml~ for HLS to pick the new modules up.
