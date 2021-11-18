@@ -11,8 +11,7 @@ A simple Cabal + Nix project template. For personal use, will change a lot in ba
 * Getting Started
 - Clone this repo
 - Rename ~projectname.cabal~ to the actual project name
-- Replace all instances of ~projectname~ with the actual project name:
-  - ~find . -type f | xargs sed -i "" "s/projectname/realname/g"~
+- Replace all instances of ~projectname~ with the actual project name: ~find . -type f | xargs sed -i "" "s/projectname/realname/g"~
 
 * Running
 - To run with Cabal, ~cabal run~
