@@ -16,9 +16,9 @@ A simple Cabal + Nix project template. For personal use, will change a lot in ba
 
 * Running
 - To run with Cabal, ~cabal run~
-- To run with Nix, ~cabal2nix . > default.nix && nix-build release.nix && result/bin/projectname~
-- For GHCi, ~cabal v2-repl~
-- Nix GHCi not yet supported (may require migrating to ~haskell.nix~)
+- To run with Nix manually, ~cabal2nix . > default.nix && nix-build release.nix && result/bin/projectname~
+- To run with Nix automatically, ~cabal --enable-nix run~
+- For GHCi, ~cabal v2-repl~ or ~cabal --enable-nix v2-repl~
 
 * Adding New Modules
 - For every new module added, ~projectname.cabal~ needs updating.
