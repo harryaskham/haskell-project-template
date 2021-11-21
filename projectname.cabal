@@ -4,12 +4,9 @@ version:                0.1.0.0
 author:                 Harry Askham
 maintainer:             harryaskham@gmail.com
 
-executable projectname
-    main-is:            Main.hs
-    other-modules:
+common common-settings
     build-depends:      base ^>=4.14.3.0,
-                        relude
-    hs-source-dirs:     app
+                        relude,
     default-language:   Haskell2010
     mixins:             base hiding (Prelude),
                         relude (Relude as Prelude),
@@ -57,10 +54,18 @@ executable projectname
                         -Wno-missing-local-signatures
                         -Wno-monomorphism-restriction
 
+executable projectname
+    import:             common-settings
+    main-is:            Main.hs
+    other-modules:      Lib
+    hs-source-dirs:     app,
+                        src
+
 Test-Suite projectname-testsuite
-  Type:                 exitcode-stdio-1.0
-  hs-source-dirs:       test
-  Main-is:              TestSuite.hs
-  Build-depends:        base,
+    import:             common-settings
+    main-is:            TestSuite.hs
+    type:               exitcode-stdio-1.0
+    hs-source-dirs:     test
+    build-depends:      projectname,
                         QuickCheck,
                         HUnit

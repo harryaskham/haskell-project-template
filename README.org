@@ -19,6 +19,9 @@ A simple Cabal + Nix project template. For personal use, will change a lot in ba
 - To run with Nix automatically, ~cabal --enable-nix run~
 - For GHCi, ~cabal v2-repl~ or ~cabal --enable-nix v2-repl~
 
+* Testing
+- ~cabal test~ will run the contents of ~test/TestSuite.hs~
+
 * Adding New Modules
 - For every new module added, ~projectname.cabal~ needs updating.
 - We also need to run ~gen-hie . > hie.yaml~ for HLS to pick the new modules up.
