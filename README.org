@@ -21,6 +21,7 @@ A simple Cabal + Nix project template. For personal use, will change a lot in ba
 
 * Testing
 - ~cabal test~ will run the contents of ~test/TestSuite.hs~
+- Running with nix manually above will run both the tests and the project, by default
 
 * Adding New Modules
 - For every new module added, ~projectname.cabal~ needs updating.

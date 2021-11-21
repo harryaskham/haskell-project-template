@@ -59,7 +59,7 @@ library
     hs-source-dirs:     src
     exposed-modules:    Lib
 
-executable projectname-exe
+executable projectname
     import:             common-settings
     main-is:            Main.hs
     hs-source-dirs:     app,
@@ -73,6 +73,5 @@ Test-Suite projectname-testsuite
     hs-source-dirs:     test
                         src
     other-modules:      Lib
-    build-depends:      projectname,
-                        QuickCheck,
+    build-depends:      QuickCheck,
                         HUnit
