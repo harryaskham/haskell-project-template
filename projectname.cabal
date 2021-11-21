@@ -54,6 +54,10 @@ common common-settings
                         -Wno-missing-local-signatures
                         -Wno-monomorphism-restriction
 
+library
+    import:             common-settings
+    exposed-modules:    Lib
+
 executable projectname
     import:             common-settings
     main-is:            Main.hs
@@ -64,8 +68,9 @@ executable projectname
 Test-Suite projectname-testsuite
     import:             common-settings
     main-is:            TestSuite.hs
+    other-modules:      Lib
     type:               exitcode-stdio-1.0
-    hs-source-dirs:     test
-    build-depends:      projectname,
-                        QuickCheck,
+    hs-source-dirs:     src,
+                        test
+    build-depends:      QuickCheck,
                         HUnit
