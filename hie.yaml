@@ -1,22 +1,22 @@
 cradle:
   cabal:
-    - path: "./"
+    - path: "src"
       component: "lib:projectname"
 
     - path: "app/Main.hs"
-      component: "projectname:exe:projectname"
+      component: "projectname:exe:projectname-exe"
 
     - path: "src/Main.hs"
-      component: "projectname:exe:projectname"
+      component: "projectname:exe:projectname-exe"
 
     - path: "app/Lib.hs"
-      component: "projectname:exe:projectname"
+      component: "projectname:exe:projectname-exe"
 
     - path: "src/Lib.hs"
-      component: "projectname:exe:projectname"
-
-    - path: "src"
-      component: "projectname:test:projectname-testsuite"
+      component: "projectname:exe:projectname-exe"
 
     - path: "test"
+      component: "projectname:test:projectname-testsuite"
+
+    - path: "src"
       component: "projectname:test:projectname-testsuite"
