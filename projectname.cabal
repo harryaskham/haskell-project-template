@@ -59,18 +59,20 @@ library
     hs-source-dirs:     src
     exposed-modules:    Lib
 
-executable projectname
+executable projectname-exe
     import:             common-settings
     main-is:            Main.hs
     hs-source-dirs:     app,
                         src
     other-modules:      Lib
 
---Test-Suite projectname-testsuite
---    import:             common-settings
---    main-is:            TestSuite.hs
---    type:               exitcode-stdio-1.0
---    hs-source-dirs:     test
---    build-depends:      projectname,
---                        QuickCheck,
---                        HUnit
+Test-Suite projectname-testsuite
+    import:             common-settings
+    main-is:            TestSuite.hs
+    type:               exitcode-stdio-1.0
+    hs-source-dirs:     test
+                        src
+    other-modules:      Lib
+    build-depends:      projectname,
+                        QuickCheck,
+                        HUnit

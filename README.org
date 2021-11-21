@@ -14,7 +14,7 @@ A simple Cabal + Nix project template. For personal use, will change a lot in ba
 - Replace all instances of ~projectname~ with the actual project name: ~find . -type f | xargs sed -i "" "s/projectname/realname/g"~
 
 * Running
-- To run with Cabal, ~cabal run~
+- To run with Cabal, ~cabal run projectname~
 - To run with Nix manually, ~cabal2nix . > default.nix && nix-build release.nix && result/bin/projectname~
 - To run with Nix automatically, ~cabal --enable-nix run~
 - For GHCi, ~cabal v2-repl~ or ~cabal --enable-nix v2-repl~
