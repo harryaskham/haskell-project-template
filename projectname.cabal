@@ -56,3 +56,11 @@ executable projectname
                         -Wno-safe
                         -Wno-missing-local-signatures
                         -Wno-monomorphism-restriction
+
+Test-Suite projectname-testsuite
+  Type:                 exitcode-stdio-1.0
+  hs-source-dirs:       test
+  Main-is:              TestSuite.hs
+  Build-depends:        base,
+                        QuickCheck,
+                        HUnit
