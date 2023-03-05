@@ -24,5 +24,5 @@ A simple Cabal + Nix project template. For personal use, will change a lot in ba
 - Running with nix manually above will run both the tests and the project, by default
 
 * Adding New Modules
-- For every new module added, ~projectname.cabal~ needs updating.
-- We also need to run ~gen-hie . > hie.yaml~ for HLS to pick the new modules up.
+- For every new module added, ~projectname.cabal~ needs updating in three places.
+- We also need to run ~~/.cabal/bin/gen-hie . > hie.yaml~ for HLS to pick the new modules up.
