@@ -17,6 +17,7 @@ A simple Cabal + Nix project template intended for snapshotting to quickstart a 
 - To run with Nix manually, ~cabal2nix . > default.nix && nix-build release.nix && result/bin/projectname~
 - To run with Nix automatically, ~cabal --enable-nix run projectname~
 - For GHCi, ~cabal v2-repl~ or ~cabal --enable-nix v2-repl~
+- To refresh ~shell.nix~ and open a Nix shell, ~cabal2nix --shell ./. >shell.nix && nix-shell~
 
 * Testing
 - ~cabal test~ will run the contents of ~test/TestSuite.hs~ initially
