@@ -1,4 +1,4 @@
-cabal-version:          3.6
+cabal-version:          2.4
 name:                   projectname
 version:                0.1.0.0
 author:                 Harry Askham
@@ -11,6 +11,7 @@ common common-settings
     -- Also needs corresponding GHC version, here 9.0.2 at least (9_2_1 is available on Darwin)
     -- Note you actually need to have that cabal version installed:
     -- See https://raw.githubusercontent.com/NixOS/nixpkgs/nixos-23.05/pkgs/development/haskell-modules/hackage-packages.nix for available versions
+    -- Also cabal2nix only supports certain cabal versions
     -- All are in home-packages-dev.nix
     build-depends:      base ^>=4.14.3.0,
                         relude
